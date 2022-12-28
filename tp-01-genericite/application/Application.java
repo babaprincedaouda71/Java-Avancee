@@ -7,10 +7,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Application {
+    public Application() {
+    }
+
     public static void main(String[] args) {
         Produit p1 = new Produit(1, "p1", "X", 2500, "produit1", 10);
-        Produit p2 = new Produit(2, "p2", "X", 2500, "produit2", 10);
-        Produit p3 = new Produit(3, "p3", "X", 2500, "produit3", 10);
+        Produit p2 = new Produit(2, "p2", "X", 2500, "produit2", 5);
+        //Produit p3 = new Produit(3, "p3", "X", 2500, "produit3", 10);
         MetierProduitImpl imp1 = new MetierProduitImpl();
         imp1.add(p1);
         imp1.add(p2);
@@ -40,7 +43,7 @@ public class Application {
             }
 
             if (choice == 3) {
-                imp1.add(p3);
+                imp1.add(new Produit(3, "p3", "X", 2500, "produit3", 8));
             }
 
             if (choice == 4) {
