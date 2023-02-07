@@ -44,5 +44,6 @@ public class MetierProduitImpl implements IMetier<Produit> {
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(produits);
         oos.close();
+        fos.close();
     }
 }
